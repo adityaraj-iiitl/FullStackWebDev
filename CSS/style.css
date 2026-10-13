@@ -1,0 +1,85 @@
+h1,h2{
+    background-color : black;
+    color: aqua;
+    font-family: sans-serif;
+    font-size:100px;
+    font-weight: bold;
+    text-align: center;
+    /* used for aligning the texts */
+
+}
+div{
+    background-color: lightseagreen;
+     justify-content: center;
+    margin-top:50px;
+    padding:20px;
+    padding-top : 2px;
+    border : 3px dotted lightcoral;
+}
+/* if common properties are defined but we want to work on a specific heading use id */
+#odoh{
+    color: green;
+}
+/* can set same properties for diff. tags using one div tag */
+/* if common properties are defined but we want to work on a specific heading use id */
+/* if we want to deal with a particular set of tags then we can use the class*/
+.a{
+    color:green;
+    font-size: large;
+}
+/* for a div inside another div we can use %(percent) for size allocation so that we can relate both the divs  */
+#parent{
+    height:300px;
+    width:300px;
+    margin:100px;
+    padding:30x;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    background-color:aqua;
+}
+/* we can use border property for making borders
+ */
+#child{
+    height:50%;
+    width: 50%;
+    background-color:darkgreen;
+    text-align:center;
+    color:brown;
+    display:flex;
+    border: 2px solid black;
+    justify-content: center;
+}
+/* dealing with more than one divs close together
+we can use the position absolute property which makes the div float in air and as it floats in air so it can make nice arrangements */
+/* if we want to bring the div exactly in the center then we can use left :50% and top:50% together with tranform : translate(-50%,-50%) property as the shifting occurs acc. to the tip of the div in the position property */
+/* we can use the z-index property for keeping one div exactly over other , the one with higher z-index comes above the one with lower z-index */
+
+#div3{
+    position: absolute;
+    top:50%;
+    left:50%;
+    background-color:blue;
+    height:100px;
+    width:100px;
+    border:2px solid green;
+    transform : translate(-50%,-50%);
+    z-index:9;
+}
+#div4{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:5;
+    background-color:violet;
+    height:100px;
+    width:100px;
+}
+
+/* to target a particular word or thing inside a div we can use span and then through that span we can change the colors and all */
+h1 span{
+    color:aqua;
+    font-weight:bold;
+    font-size:large;
+}
