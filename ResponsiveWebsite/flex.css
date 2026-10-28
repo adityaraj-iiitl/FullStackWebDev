@@ -1,0 +1,100 @@
+/* body{
+   
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width:100vw;
+    height:100vh;
+    flex-wrap:wrap;
+}
+/*  by using display flex we can align the divisions present as we wanted */
+/* one thing you can set flex-direction as column -reverse also which will reverse the sequence of divs */
+/* .box1{
+    height:20vh;
+    width: 20vw;
+    background-color: seagreen;
+    flex-shrink:0;
+}
+.box2{
+    height:20vh;
+    width:20vw;
+    flex-shrink:0;
+    background-color: deepskyblue;
+}
+.box3{
+    height:20vh;
+    width:20vw;
+    flex-shrink:0;
+    background-color: blue;
+} */ 
+/* if we have many divs and we want them to come on o the next line then we can use flex-wrap: wrap property , or if we want them to continue on the same line out of the page , then we can give flex-wrap:no-wrap and then also set the shrink of elements to flex-shrink:0;  */
+/* grid is an updated version of flex like it can do many things easily which flex cant
+grid-template-row: % of every child
+grid-template-column: % of every child
+
+grid-auto-flow is like flex-direction*/
+.parent{
+    background-color: black;
+    height: 100vh;
+    width:100vw;
+    display:grid;
+    grid-auto-flow: column;
+    /* we can also use the division type fr which divides the row or column into the certified no of rows or columns */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+}
+.child1{
+    
+    background-color: crimson;
+    border:2px solid white;
+}
+.child2{
+     
+    background-color: deeppink;
+      border:2px solid white;
+}
+.child3{
+    background-color: gold;
+      border:2px solid white;
+}
+.child4{ 
+    background-color: aqua;
+      border:2px solid white;
+}
+/* Media queries are used to make the website responsive to adapt according to the screen sizes */
+body{
+    display:flex;
+}
+.navm{
+    display:flex;
+    width:100%;
+    height:20%;
+    background-color: darkcyan;
+    color:white;
+}
+.nav1{
+    height:100%;
+    width:50%;
+    font-size:20px;
+}
+.nav2{
+    font-size:23px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    margin-top:10px;
+    gap:50px;
+    height:100%;
+    width:50%;
+}
+
+@media (max-width:500px)
+{
+    .navm{
+        background-color:black;
+    }
+    h3{
+        display:none;
+    }
+}

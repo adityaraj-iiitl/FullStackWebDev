@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Download Progress</title>
+</head>
+<body>
+    <main class="download-card">
+        <div class="download-heading">
+            <div>
+                <h1>Downloading file</h1>
+                <p class="file-name">project-files.zip</p>
+               
+            </div>
+             <span id="percent">65%</span>
+        </div>
+
+        <div
+            class="progress-track"
+            role="progressbar"
+            aria-label="Download progress"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="65"
+        >
+            <div class="progress-fill"></div>
+        </div>
+
+        <p class="download-status">Downloading... <span id="mb">0 MB of 10 MB</span></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

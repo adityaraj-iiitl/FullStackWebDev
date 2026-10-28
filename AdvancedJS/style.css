@@ -1,0 +1,48 @@
+.hari{
+    font-size:50px;
+}
+.highlight{
+    background-color: aqua;
+}
+#btnup{
+    background-color: aqua;
+    color:whitesmoke;
+
+}
+#fileinp{
+    display:none;
+}
+#card{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#image{
+    background-size:cover;
+}
+ .abc{
+            height:200px;
+            width:200px;
+            background-color: aqua;
+            position:absolute;
+            border-radius:50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+.cdc{
+    background-color:slategray;
+    height:50%;
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.c{
+    height:50%;
+    width:50%;
+    background-color: blue;
+    border-radius: 50%;
+}
