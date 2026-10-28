@@ -1,0 +1,46 @@
+body{
+    background-color: #222;
+    height: 100%;
+    width:100%;
+}
+.div1{
+    height:10vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+p{
+    font-size:25px;
+    padding:30px;
+}
+
+.div2{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.div3{
+    height:30vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+label{
+    font-size:20px;
+    padding:20px;
+    color:white;
+    gap:20px;
+}
+.gapc{
+    margin:20px;
+}
+p{
+    color:aqua;
+}
