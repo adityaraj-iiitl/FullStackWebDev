@@ -10,11 +10,12 @@
 // },500)
 
 //clear interval and clear timeout are used to clear those timeouts and intervals if we dont need to use them anymore
-
+let statuse=document.querySelector(".download-status")
 let bar=document.querySelector(".progress-fill")
 
 let percent=document.querySelector("#percent")
 
+let h1=document.querySelector("h1")
 let mb=document.querySelector("#mb")
 let ct=0;
 let int =setInterval(function(){
@@ -26,6 +27,8 @@ let int =setInterval(function(){
     mb.textContent=`${num} out of 10mb`
     percent.textContent=`${ct}%`}else
     {
+        statuse.style.display="none";
+        h1.textContent="Downloaded";
         clearInterval(int);
     }
-},300)
+},30)

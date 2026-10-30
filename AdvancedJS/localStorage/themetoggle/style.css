@@ -1,0 +1,20 @@
+.dark{
+    background-color: #222;
+}
+.light{
+    background-color: aliceblue;
+}
+.div1{
+   width:100vw;
+   height: 100vh; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.btn{
+    background-color: aqua;
+    color:white;
+    font-weight:bold;
+    -webkit-text-stroke: 0.5px black;
+    font-size:30px;
+}
