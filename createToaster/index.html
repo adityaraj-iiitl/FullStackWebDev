@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A clean, customizable toast notification playground."
+    />
+    <title>Toastly — Toast notification playground</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="Toastly home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M7.5 9.5h9a3 3 0 0 1 3 3v5.25a1.75 1.75 0 0 1-1.75 1.75h-12A1.75 1.75 0 0 1 4 17.75V13a3.5 3.5 0 0 1 3.5-3.5Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8 6.5c0-1 .75-1.5.75-2.5m3.25 2.5c0-1 .75-1.5.75-2.5m3.25 2.5c0-1 .75-1.5.75-2.5M4.5 14h15"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span>toastly</span>
+        </a>
+        <div class="header-note">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Notification playground</span>
+        </div>
+        <a class="github-link" href="https://github.com/" aria-label="View on GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              fill-rule="evenodd"
+              d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.17-3.02-.12-.29-.51-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.62 1.55.23 2.69.11 2.98.73.79 1.17 1.79 1.17 3.02 0 4.32-2.64 5.27-5.15 5.55.4.35.76 1.04.76 2.1v3.08c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </header>
+
+      <main>
+        <section class="intro-section">
+          <div class="eyebrow"><span></span> SMALL MESSAGES, BIG DELIGHT</div>
+          <h1>Good things,<br class="mobile-break" /> <span>delivered.</span></h1>
+          <p>
+            A little toast goes a long way. Preview your notifications, pick a
+            style, and make every update feel just right.
+          </p>
+        </section>
+
+        <section class="playground" aria-label="Toast notification playground">
+          <div class="preview-panel">
+            <div class="panel-topline">
+              <div>
+                <p class="panel-kicker">LIVE PREVIEW</p>
+                <h2>Your notifications</h2>
+              </div>
+              <span class="preview-badge">
+                <span aria-hidden="true"></span>
+                Preview
+              </span>
+            </div>
+
+            <div
+              class="toast-stack"
+              id="toast-container"
+              aria-live="polite"
+              aria-label="Toast notifications"
+            >
+             
+               
+            </div>
+
+            <div class="preview-footer">
+              <span class="sparkle" aria-hidden="true">✦</span>
+              <span>Made to be noticed, never annoying.</span>
+              <span class="footer-count">03 <span>/ 03</span></span>
+            </div>
+          </div>
+
+          <aside class="controls-panel" aria-label="Toast controls">
+            <div class="controls-heading">
+              <div class="settings-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 7h9m4 0h3M4 17h3m4 0h9M13 4v6M7 14v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div>
+                <p class="panel-kicker">MAKE IT YOURS</p>
+                <h2>Toast settings</h2>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <p class="control-label">CHOOSE A TYPE</p>
+              <div class="type-grid" role="group" aria-label="Choose a toast type">
+                <button class="type-option type-option-success is-selected" type="button" data-toast-type="success" aria-pressed="true">
+                  <span class="type-dot"></span> Success
+                </button>
+                <button class="type-option type-option-error" type="button" data-toast-type="error" aria-pressed="false">
+                  <span class="type-dot"></span> Error
+                </button>
+                <button class="type-option type-option-warning" type="button" data-toast-type="warning" aria-pressed="false">
+                  <span class="type-dot"></span> Warning
+                </button>
+                <button class="type-option type-option-info" type="button" data-toast-type="info" aria-pressed="false">
+                  <span class="type-dot"></span> Info
+                </button>
+              </div>
+            </div>
+
+            <div class="control-group position-group">
+              <p class="control-label">POSITION</p>
+              <div class="position-control" role="group" aria-label="Toast position">
+                <button class="position-option is-active" type="button" data-position="top-right" aria-pressed="true">
+                  <span class="position-preview position-preview-tr" aria-hidden="true"><i></i></span>
+                  Top right
+                </button>
+                <button class="position-option" type="button" data-position="bottom-right" aria-pressed="false">
+                  <span class="position-preview position-preview-br" aria-hidden="true"><i></i></span>
+                  Bottom right
+                </button>
+              </div>
+            </div>
+
+            <div class="control-group message-group">
+              <label class="control-label" for="toast-message">YOUR MESSAGE</label>
+              <div class="message-input-wrap">
+                <input
+                  id="toast-message"
+                  name="message"
+                  type="text"
+                  maxlength="80"
+                  value="Your profile is looking good."
+                  placeholder="Type a message..."
+                />
+                <span class="input-sparkle" aria-hidden="true">✦</span>
+              </div>
+            </div>
+
+            <button class="show-toast-button" id="show-toast" type="button">
+              <span>Show toast</span>
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <p class="keyboard-hint">Pro tip: good news deserves a little <span>✨</span></p>
+          </aside>
+        </section>
+
+        <footer class="site-footer">
+          <span>Thoughtful feedback, one toast at a time.</span>
+          <span class="footer-divider" aria-hidden="true"></span>
+          <span>Built for the little moments <span class="heart">♥</span></span>
+        </footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
