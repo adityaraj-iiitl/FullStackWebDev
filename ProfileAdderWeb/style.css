@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.font-display {
+  font-family: "Manrope", sans-serif;
+}
+
+.form-input {
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.form-input:focus {
+  border-color: #047857;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgb(16 185 129 / 13%);
+}
+
+.upload-area:focus-within {
+  border-color: #047857;
+  box-shadow: 0 0 0 3px rgb(16 185 129 / 13%);
+}
+
+.submit-button {
+  box-shadow: 0 8px 18px -10px rgb(6 78 59 / 60%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
