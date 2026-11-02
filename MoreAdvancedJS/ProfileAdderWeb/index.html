@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create a collection of people and the work they do."
+    />
+    <title>People — Profile Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen bg-[#f7f8f6] text-slate-900 antialiased">
+    <main class="mx-auto max-w-6xl px-5 pb-20 pt-8 sm:px-8 sm:pt-12">
+      <header class="mb-10 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3" aria-label="People home">
+          <span
+            class="grid h-10 w-10 place-items-center rounded-2xl bg-emerald-950 text-white"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5">
+              <path
+                d="M16 20v-1.6a3.4 3.4 0 0 0-3.4-3.4H6.4A3.4 3.4 0 0 0 3 18.4V20m16 0v-1.6a3.4 3.4 0 0 0-2.5-3.28M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8-7.7a4 4 0 0 1 0 7.75"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="font-display text-lg font-extrabold tracking-tight">people<span class="text-emerald-700">.</span></span>
+        </a>
+        <span class="hidden text-sm font-medium text-slate-500 sm:block">A little space for great people</span>
+      </header>
+
+      <section class="mb-14 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div class="pt-2">
+          <p class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Your community, collected</p>
+          <h1 class="font-display max-w-md text-4xl font-extrabold leading-[1.08] tracking-[-0.045em] sm:text-5xl">
+            Make room for <span class="text-emerald-700">good people.</span>
+          </h1>
+          <p class="mt-5 max-w-md text-base leading-7 text-slate-600">
+            Add the people you work with, learn from, or just think are pretty great.
+          </p>
+          <div class="mt-8 flex items-center gap-3 text-sm text-slate-500">
+            <span class="grid h-8 w-8 place-items-center rounded-full bg-emerald-100 text-emerald-800" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none" class="h-4 w-4">
+                <path d="M10 3v14m7-7H3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span>Start by adding your first profile</span>
+          </div>
+        </div>
+
+        <form id="profile-form" class="form-panel rounded-3xl border border-slate-200/80 bg-white p-6 shadow-[0_18px_55px_-35px_rgba(15,23,42,0.3)] sm:p-8">
+          <div class="mb-7 flex items-start justify-between gap-4">
+            <div>
+              <h2 class="font-display text-xl font-bold tracking-tight">Add a profile</h2>
+              <p class="mt-1 text-sm text-slate-500">A few details are all it takes.</p>
+            </div>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800">NEW PERSON</span>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="profile-name" class="mb-2 block text-sm font-semibold text-slate-700">Full name</label>
+              <input
+                id="profile-name"
+                name="name"
+                type="text"
+                placeholder="e.g. Alex Morgan"
+                autocomplete="name"
+                required
+                class="form-input w-full rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400"
+              />
+            </div>
+            <div>
+              <label for="profile-role" class="mb-2 block text-sm font-semibold text-slate-700">Role</label>
+              <input
+                id="profile-role"
+                name="role"
+                type="text"
+                placeholder="e.g. Product designer"
+                required
+                class="form-input w-full rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400"
+              />
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <label for="profile-bio" class="mb-2 block text-sm font-semibold text-slate-700">A little about them</label>
+            <textarea
+              id="profile-bio"
+              name="bio"
+              rows="3"
+              placeholder="What makes them interesting?"
+              required
+              class="form-input w-full resize-y rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm leading-6 text-slate-900 placeholder:text-slate-400"
+            ></textarea>
+          </div>
+
+          <div class="mt-5">
+            <label for="profile-photo" class="mb-2 block text-sm font-semibold text-slate-700">Profile photo</label>
+            <input
+              id="profile-photo"
+              name="photo"
+              type="text"
+              placeholder="https://example.com/photo.jpg"
+              class="form-input w-full rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="submit-button mt-7 flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-950 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
+          >
+            Add to the people list
+            <svg viewBox="0 0 20 20" fill="none" class="h-4 w-4">
+              <path d="M4 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </form>
+      </section>
+
+      <section aria-labelledby="people-heading">
+        <div class="mb-6 flex items-end justify-between gap-4 border-b border-slate-200 pb-5">
+          <div>
+            <p class="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">The good people</p>
+            <h2 id="people-heading" class="font-display text-2xl font-extrabold tracking-tight">People in your corner</h2>
+          </div>
+          <span id="profile-count" class="hidden rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm">0 profiles</span>
+        </div>
+
+        <div id="profile-list" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite">
+          <div id="empty-state" class="col-span-full rounded-2xl border border-dashed border-slate-300 bg-white/60 px-6 py-10 text-center">
+            <span class="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-emerald-50 text-emerald-800" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" class="h-6 w-6">
+                <path d="M16 20v-1.6a3.4 3.4 0 0 0-3.4-3.4H6.4A3.4 3.4 0 0 0 3 18.4V20m16 0v-1.6a3.4 3.4 0 0 0-2.5-3.28M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm8-7.7a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <h3 class="mt-4 font-display text-base font-bold text-slate-800">Your list starts here</h3>
+            <p class="mt-1 text-sm text-slate-500">Add a profile above and it will show up here.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
