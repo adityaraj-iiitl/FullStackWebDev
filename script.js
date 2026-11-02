@@ -62,3 +62,107 @@
 
 //bind:- it creates a copy of the actual function with this keyword initialized inside that function as the object that we passed
 //let func =abcd.bind(obj,1,2,3);
+
+//extend and super keywords are used when we require teh properties of one class into another class ,in such cases we just simply made that class extend the previous class and as it has extended ,so it inherits all of its variable and methods also we can call  the parent class using super ex;-
+
+// class user{
+//     constructor(name,email,age)
+//     {
+//         this.name=name;
+//         this.email=email;
+//         this.age=age;
+//     }
+    
+//     write(text)
+//     {
+//         let h1=document.createElement("h1");
+//         h1.textContent=text;
+//         document.body.appendChild(h1);
+//     }
+// }
+
+// class admin extends user{
+//     constructor(name,email,age,mob){
+//         super(name,email,age)
+//         //calling the parent class
+//         this.mob=mob;
+//     }
+//     remove(){
+//         let h1s=document.querySelectorAll("h1");
+//         h1s.forEach(function(elem){
+//             elem.remove();
+//         })
+//     }
+// }
+// let u1=new user("aditya","aditya@gamil.com","23");
+// let u2=new user("krishna","madanmohan@gmail.com","infinity");
+// let a1=new admin("Shrimati Radha Rani","Radha(madanmohanmohani)@gmail.com","infinity+1","harekrishnaharekrishna");
+
+//now inheritance is also of two types :- 1.classical inheritance  2.prototypal inheritance
+//classical inheritance means inheriting directly from the class on class level as in the above example
+//prototypal inheritance when we create a new object using an old object and then both of those objects share the same memory address and then using the other we can refernce the 1st or so.
+
+//let b1=Oject.create(u1);  here b1 also inherits the same methods and properties as u1
+
+//synchronous and asynchronous code running 
+//synchronous is when the code runs line by line
+//asynchronous is when the code waits for a certain period and then runs
+
+// console.log(1) - Sync 
+// console.log(2 )-sync 
+// setTimeout(() => {
+//     console.log(3)  -async
+// }, 2000);
+// console.log(4)  - sync
+
+//function callback means when we pass a function as a argument to another function and then that function in turn calls another function and these group of functions gradually creates a pattern called function callback like
+
+// userLao("aditya",function(data){ saarePostlao(data.id,function(posts){ postprintkar(data.id)})})
+
+//when there are too many functions whose exection depends on one another that only if one of the function then only we can run the another function or there are too many nestings of the function then this creates a hell
+
+//promise is what executes when an asynchronous function sometimes fail to execute it has two types of states which are resolve and reject
+
+//the resolve part runs when the it meets the criteria and the reject part runs when it doesnot meet the criteria and thus in both cases the js works ,ex
+
+//let pr = new  promise(function(res,rejct){
+// setTimeout(() => {
+//     if(data.len==100) res 
+//     else  rej ;
+// }, 300);})
+
+// promise have two functions one with .then which runs with resolve and .catch which runs with reject()
+
+//ex; pr.then(function(val){console.log(val)}).catch(function(val){console.log(val)});
+
+//await is a function which makes us avoid the try catch part of the promise
+
+// let pr = new Promise(function(resolve, reject) {
+//     let num = Math.floor(Math.random() * 10) + 1; // 1 to 10
+
+//     if (num <= 5) {
+//         resolve("yes it is lesser");
+//     } else {
+//         reject("no it is larger");
+//     }
+// });
+
+// async function abcd(){
+//     try{
+//         let val=await pr;
+//         console.log(val)
+//     }catch(err)
+//     {
+//         console.log(err);
+//     }
+// }
+
+// abcd()
+
+//fetch keyword is used to fetch the data from the api from whereever it is called now fetch keyword is also a promise function so it  uses then and catch also
+
+//like we can use fetch and then catch in it
+//first of all the fetch keyword gives the data in a different format which we can then convert using .json and is passed to another then operation and in that second then operation we can deal with the raw data
+
+fetch('https://randomuser.me/api/?results=10').then((raw)=> raw.json()).then((data)=> console.log(data))
+
