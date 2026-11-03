@@ -1,45 +1,20 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define int long long
-
-int32_t main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int t;
-    cin >> t;
-
-    while (t--)
-    {
-        int n;
-        cin>>n;
-        int len=0;
-        int num=n;
-        while(num>0)
+  int32_t n=coins.size();
+      vector<vector<int32_t>> dp(amount+1,vector< int32_t>(n+1,0));
+      for(int32_t j=0;j<=n;j++)
+      {
+        dp[0][j]=1;
+      }
+      for(int32_t j=1;j<=amount;j++)
+      {
+        for(int32_t i=1;i<=n;i++)
         {
-            int nus=num%10;
-            num/=10;
-            len++;
-        }
-        
-        int maxi=n+((len+1)*9);
-        int ans=0;
-        for(int j=n+1;j<=maxi;j++)
-        {
-            int sum=0;
-            int num=j;
-            while(num>0)
+            if((j-coins[i-1])>=0)
             {
-                sum+=num%10;
-                num/=10;
+                dp[j][i]=dp[j][i-1]+dp[j-coins[i-1]][i];
+            }else
+            {
+               dp[j][i]=dp[j][i-1];
             }
-            if((j-sum)==(n))
-            ans++;
         }
-        cout<<ans<<endl;
-    }
-
-    return 0;
-}
+      }
+      return dp[amount][n];
