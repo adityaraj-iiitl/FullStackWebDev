@@ -1,0 +1,42 @@
+.div1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    color:white;
+    height: 100vh;
+    width:100vw;
+}
+.div2{
+    width:100%;
+    background-color: aqua;
+    height:400px;
+
+}
+.div3{
+    width:100%;
+    background-color: orange;
+    height:400px;
+    
+    background-size:contain;
+}
+.div4{
+    width:100%;
+    background-color: aqua;
+    height:400px;
+}
+.div5{
+    width:100%;
+    background-color: aquamarine;
+    height:400px;
+   background-size:contain;
+}
+img{
+    background-size:cover;
+    height:100%;
+    width:100%;
+}
+
+body{
+    margin:0px;
+}
