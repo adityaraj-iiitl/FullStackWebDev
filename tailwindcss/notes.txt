@@ -1,0 +1,2 @@
+tailwind css is a css framework which provides us with easy way to add css to the html file with the help of adding classes
+it is better than bootstrap because it makes us add less lines of code and achieve the same desired output 
