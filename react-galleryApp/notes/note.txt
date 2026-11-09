@@ -1,0 +1,18 @@
+we can use axios to fetch data also , axios is very good for fetching as it is better in error detection than the pre present fetch and its setup is easy also
+npm i axios
+import axios from 'axios'
+
+then we can use it inside the code as 
+const data=axios.get("//api");
+
+axios by default gives parsed data no need of JSON.parse
+
+now after this we can use the data wherever it is required
+
+USEEFFECT:- it is used to store some processes in a side stack that occurs after the react rerendering is completed , it has mainly use with async prcesses but also one thing we can do is that we can set it to change according to a state, so that whenver a state changes its value is also changed 
+
+syntax:-
+useEffect(function(){
+    console.log('hari boLL")
+},[])-> dependency array ,if i pass any state to this then whenever that state will change then this useeffect will also run , if it is kept empty then it runs only once ,and if it is not mentioned only then it runs as many times the react render occurs
+

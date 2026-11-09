@@ -1,0 +1,21 @@
+hooks are those which are used to manage somethings like functions in react they are of various kinds like :- 
+1. useState :- used to manage the local states and there values
+2. useEffect :- used to manage side events
+3. useContext :- bigger version of useState used to manage the global level stages
+4. useReducer :- used to manage complex states
+5. useRef :- to hold multiple values
+6. useMemo & useCallback :- to optimize the code 
+and avoid unnecessary re renders
+
+Some important points about state management or useState():-
+1 .after calling the function setNum also the value of num doesnt change immediately so if one will try to access that value immediately after that step then the older value will be shown
+
+2.also react doesnt re-render if the value is same as before or the state is same as before , it checks if there is a change actually and only then renders something
+
+3.dealing with arrays and objects in react ,so objects and arrays are basically those values whose reference in the memory is given and not the exact location of the data , means the data can be present anywhere other and its reference in there .So in react if we dont change the objects and arrays directly because then that can cause problems so rather what we do is to create new arrays and object copies of then do the changes in thsoe copies
+
+a shortcut to do these changes is using a predefined arrow function as setNum(prev=>({...prev,age:50}))
+
+two way binding is where we involve react to interact with the dom rather than our interacting with the react dom itself
+
+in this way an example can be of typing something in the form so in react rather than directly interacting with the form , we rather make react to interact with it and then react sets those values
