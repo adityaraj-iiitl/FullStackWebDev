@@ -1,0 +1,33 @@
+we can create routes on which the website will navigate in react using react router dom , it doesn't reloads the page it just renders the required page itself , so there are different kinds:-
+Browser routing :- routing at browser level by changing url
+hash routing:- url becomes hashed
+static routing :- routing to staic sites
+
+syntax:-
+<BrowserRouter>
+  <Routes>
+    <Route to={/about} element={/About} />
+  <Routes />
+<BrowserRouter />
+
+if we wanted nested routes in react then we can add the routes inside the exisitng and while sending the jsx component to the app file we can add a keyword <outlet /> which will help identify that it is a route
+
+
+Dynamic routing :- in this routing we take the params the url typed by using the useParams() keyword and using that param we can render the whole websites very swiftly and fastly
+
+ex:- 
+<Route path="/courses/:id" element={<CourseDetail />} />
+
+now anything the user types in the url after courses/... will direct to the CourseDetail component , also he can get the value of what is typed in the url use useParams
+const params=useParams() and whatever is after courses/ in the url will come 
+
+useNavigate :- you can use useNavigate to navigate you to those pages from some random page that you want , like from the about page to home page and then from the home page to back
+syntax :-
+const navigate= useNavigate()
+
+const btnclicked =()=>{
+  navigate('/')
+}
+
+we can sent data from parent to children using props but how to send data from children to parent 
+that we do by passing the state functions in props then by using those state functions react can change the data values on the main page
